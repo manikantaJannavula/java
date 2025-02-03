@@ -1,4 +1,6 @@
-package com.wipro.java.oops;
+package com.wipro.java.oops.inheritance;
+
+import com.wipro.java.oops.Employee;
 
 /**
  * Parent Class= Employee Child class =Developer Extends =is a keyword
