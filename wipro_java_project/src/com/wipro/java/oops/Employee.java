@@ -15,7 +15,6 @@ public class Employee {
 	private int empAge;//employee Age
 	private String empDesignation;//Employee Designation
 	private float Salary;//Employee Salary
-	
 	//Getters and Setters
 	public int getEmpId() {
 		return empId;
