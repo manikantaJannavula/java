@@ -1,9 +1,5 @@
 package com.wipro.java.collection;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 public class AnimalComparable implements Comparable<AnimalComparable> {
     private String name;
     private int age;
