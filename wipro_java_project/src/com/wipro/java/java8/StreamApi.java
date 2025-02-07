@@ -19,6 +19,7 @@ public class StreamApi {
         System.out.println("Sorted numbers of numbers1 (Ascending Order): " + sortedNumbers);
         
         // Sorting the list in descending order using streams
+        List<Integer> sortedNumbers1 = numbers1.stream()
                                              .sorted(Comparator.reverseOrder())
                                              .collect(Collectors.toList());
         System.out.println("Sorted numbers of numbers1 (Descending Order): " + sortedNumbers1);
