@@ -20,6 +20,9 @@ public class EmployeeServiceTest {
 
     private EmployeeService employeeService;
 
+    /**
+     * Setup method to initialize EmployeeService and add default employees.
+     */
     @BeforeEach
     void setUp() {
         employeeService = new EmployeeService();
@@ -27,6 +30,9 @@ public class EmployeeServiceTest {
         employeeService.addEmployee(new Employee(2, "Jane Doe", "HR", 80000.0, LocalDate.of(2021, 6, 20)));
     }
 
+    /**
+     * Test case to verify adding a new employee.
+     */
     @Test
     void testAddEmployee() {
         Employee emp = new Employee(3, "Alice Brown", "Finance", 90000.0, LocalDate.of(2019, 3, 10));
@@ -34,12 +40,18 @@ public class EmployeeServiceTest {
         assertEquals(3, employeeService.getEmployees().size());
     }
 
+    /**
+     * Test case to verify removing an employee by ID.
+     */
     @Test
     void testRemoveEmployee() {
         employeeService.removeEmployee(1);
         assertEquals(1, employeeService.getEmployees().size());
     }
 
+    /**
+     * Test case to verify updating an employee's salary.
+     */
     @Test
     void testUpdateSalary() {
         employeeService.updateSalary(2, 85000.0);
@@ -53,6 +65,9 @@ public class EmployeeServiceTest {
         assertEquals(85000.0, updatedEmployee.getSalary(), 0.001);
     }
 
+    /**
+     * Test case to filter employees by department.
+     */
     @Test
     void testFilterByDepartment() {
         List<Employee> hrEmployees = employeeService.getEmployees().stream()
@@ -61,12 +76,18 @@ public class EmployeeServiceTest {
         assertEquals(1, hrEmployees.size());
     }
 
+    /**
+     * Test case to verify sorting employees by name.
+     */
     @Test
     void testSortByEmployeeName() {
         employeeService.sortByEmployeeName();
         assertEquals("Jane Doe", employeeService.getEmployees().get(0).getName());
     }
 
+    /**
+     * Test case to search for an employee by ID.
+     */
     @Test
     void testSearchByEmployeeID() {
         Employee emp = employeeService.getEmployees().stream()
