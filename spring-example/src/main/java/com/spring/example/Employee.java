@@ -1,37 +1,45 @@
-package com.spring.example;
+package com.spring.example; // Package declaration
 
+// Employee class representing an employee entity
 public class Employee {
 
-	private int id;
-	private String name;
-	private String city;
+    // Private fields to store employee details
+    private int id;         // Employee ID
+    private String name;    // Employee Name
+    private String city;    // Employee City
 
-	public int getId() {
-		return id;
-	}
+    // Getter method for Employee ID
+    public int getId() {
+        return id;
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    // Setter method for Employee ID
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public String getName() {
-		return name;
-	}
+    // Getter method for Employee Name
+    public String getName() {
+        return name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    // Setter method for Employee Name
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public String getCity() {
-		return city;
-	}
+    // Getter method for Employee City
+    public String getCity() {
+        return city;
+    }
 
-	public void setCity(String city) {
-		this.city = city;
-	}
+    // Setter method for Employee City
+    public void setCity(String city) {
+        this.city = city;
+    }
 
-	void display() {
-		System.out.println(id + " " + name + " " + city);
-	}
-
+    // Method to display Employee details
+    void display() {
+        System.out.println(id + " " + name + " " + city);
+    }
 }
