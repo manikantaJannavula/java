@@ -3,6 +3,7 @@ package com.wipro.java.collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.TreeMap;
 
 public class HashMapExample {
 	public static void main(String[] args) {
@@ -25,7 +26,9 @@ public class HashMapExample {
 		for (Map.Entry<Integer, String> languages : map.entrySet()) {
 			System.out.println("Key:" + languages.getKey() + ",Value:" + languages.getValue());
 		}
-
+		//Sort the Elements using TreeMap 
+		TreeMap<Integer, String> treeMap=new TreeMap<>(map);
+		System.out.println("Sorted elements in an ascending order:"+treeMap);
 		// Displaying the stored key-value pairs
 		System.out.println("\nHashMap Contents: " + map);
 
