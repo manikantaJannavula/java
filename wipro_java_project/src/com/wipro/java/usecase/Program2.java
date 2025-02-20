@@ -23,6 +23,7 @@ public class Program2 {
 				if (isValid) {
 					count++;
 				}
+				
 			}
 		}
 
